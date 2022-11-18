@@ -1,0 +1,47 @@
+{% extends base_page %}
+{% load static %}
+
+{% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block title %}
+Divisions
+{% endblock %}
+
+{% block links %}
+    <link href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.new.css' %}"
+          rel="stylesheet">
+
+    <link href="{% static 'fontawesome/all.min.css' %}"
+          rel="stylesheet">
+
+    <link href="{% static 'bs_treeview/css/bs5-nav-tree.css' %}"
+          rel="stylesheet">
+
+    <link href="{% static 'custom/css/main.css' %}"
+          rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section class="main-section">
+    <div class="row overflow-fix">
+        <div class="col-4 mx-auto">
+            <ul id="nav-tree">
+                {% with source_dict=divisions_tree %}
+                    {% include tree_template %}
+                {% endwith %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'bootstrap-5.2.2-dist/js/bootstrap.bundle.min.new.js' %}"></script>
+
+    <script src="{% static 'jquery-3.6.1.min.js' %}"></script>
+
+    <script src="{% static 'bs_treeview/js/bs5-nav-tree.js' %}"></script>
+    <script src="{% static 'bs_treeview/js/tree_endpoint.js' %}"></script>
+{% endblock %}

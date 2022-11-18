@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% block meta %}
+        {% endblock %}
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        {% block links %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class="body-container">
+            {% include header_template %}
+
+            {% block content %}
+            {% endblock %}
+
+            {% include footer_template %}
+        </div>
+
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>

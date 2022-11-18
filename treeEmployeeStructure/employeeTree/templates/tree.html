@@ -1,0 +1,35 @@
+{% if source_dict %}
+    {% for main_division, nest_dict_1 in source_dict.items %}
+        <li id="li{{main_division.id}}"
+            data-value="li{{main_division.id}}">
+            <input class="employees-displayed"
+                   type="checkbox"
+                   style="display: none;">
+            <a>
+                {{main_division.name}}
+            </a>
+            <ul>
+                {% for key, nested_dict in nest_dict_1.items %}
+                    {% if key == 'employees' and nested_dict %}
+                        <li id="li{{main_division.id}}1"
+                            data-value="li{{main_division.id}}1"
+                            data-division_id="{{main_division.id}}"
+                            data-employees="true">
+                            <input class="employees-displayed"
+                                   type="checkbox"
+                                   style="display: none;">
+                            <a>
+                                Показать сотрудников
+                            </a>
+                            <ul>
+                            </ul>
+                        </li>
+                    {% endif %}
+                    {% with source_dict=nested_dict %}
+                        {% include tree_template %}
+                    {% endwith %}
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+{% endif %}
