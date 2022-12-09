@@ -33,12 +33,9 @@ docker-compose up --build
     Описание
 </h1>
 
-Структура проекта классическая Джанговская. За исключением того, что я добавил модуль services.py и обернул всё в Docker для удобного разворота
+Database: PostgreSQL<br>
+Front: Bootstrap<br>
+Main Framework: Django 4.1.2<br>
+Asynchronous requests from frontend: AJAX<br>
 
-Опишу здесь основные пункты по проекту
-
-Database: PostgreSQL
-Front: Bootstrap
-Main Framework: Django 4.1.2
-Asynchronous requests from frontend: AJAX
-
+Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом
