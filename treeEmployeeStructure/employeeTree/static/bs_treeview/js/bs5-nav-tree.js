@@ -114,6 +114,7 @@ class NavTree {
               if (li.dataset.employees) {
                   if (li.firstChild.nextSibling.checked === true) {
                   } else {
+//                      let url = document.location.protocol + "//" + document.location.hostname + ":8000";
                       $.getJSON('/divisions/' + li.dataset.division_id, function(employees_dict, jqXHR){
                           let a = '';
                           for (const [id_, data] of Object.entries(employees_dict)) {

@@ -71,7 +71,7 @@ class Employee(models.Model):
                 to_return.order_by(order)
             return to_return
         else:
-            print('division_id is required for get_division_employees function')
+            raise AttributeError('division_id is required for get_division_employees function')
 
     def __str__(self):
         return f'{self.surname} {self.name} {self.middle_name}. ' \
