@@ -13,9 +13,9 @@
     <h3>1. Docker</h3>
         <span>Команда для разворота проекта:</span>
 
-    ```bash
-    docker-compose up --build -d
-    ```
+```bash
+docker-compose up --build -d
+```
 
         <span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span>
         <span>Административная панель: <a href="http://localhost/admin/" target="_blank">admin/</a></span>
