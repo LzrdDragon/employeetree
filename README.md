@@ -16,7 +16,7 @@
 ```bash
 docker-compose up --build -d
 ```
-или без влага -d
+или
 ```bash
 docker-compose up --build
 ```
