@@ -33,11 +33,12 @@ docker-compose up --build
     Описание
 </h1>
 
-Programming Language: Python 3.10.4<br>
+Main Programming Language: Python 3.10.4<br>
+Also I used a little bit of: JavaScript<br>
+With AJAX framowork for Asynchronous requests<br>
 Database: PostgreSQL<br>
 Front: Bootstrap<br>
 Main Framework: Django 4.1.2<br>
-Asynchronous requests from frontend: AJAX<br>
 
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом
 
