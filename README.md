@@ -40,6 +40,8 @@ Database: PostgreSQL<br>
 Front: Bootstrap<br>
 Main Framework: Django 4.1.2<br>
 
+<tr><td><a href="#"><font color="red"> Link 3 </font></a></td></tr>
+
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом
 
 ### A typical top-level directory layout
