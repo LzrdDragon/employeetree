@@ -33,9 +33,22 @@ docker-compose up --build
     Описание
 </h1>
 
+Programming Language: Python 3.10.4
 Database: PostgreSQL<br>
 Front: Bootstrap<br>
 Main Framework: Django 4.1.2<br>
 Asynchronous requests from frontend: AJAX<br>
 
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом
+
+### A typical top-level directory layout
+
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
+
