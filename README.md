@@ -30,3 +30,6 @@ Database: PostgreSQL
 Front: Bootstrap
 Main Framework: Django 4.1.2
 Asynchronous requests from frontend: AJAX
+
+[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
+
