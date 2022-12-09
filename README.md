@@ -9,7 +9,7 @@
     Разворот проекта
 </h1>
 
-1. Docker
+1. Docker<br>
     Команда для разворота проекта:<br>
       docker-compose up --build -d<br>
     Главная страница будет доступна по адресу: http://localhost/<br>
