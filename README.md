@@ -33,7 +33,7 @@ docker-compose up --build
     Описание
 </h1>
 
-Programming Language: Python 3.10.4
+Programming Language: Python 3.10.4<br>
 Database: PostgreSQL<br>
 Front: Bootstrap<br>
 Main Framework: Django 4.1.2<br>
