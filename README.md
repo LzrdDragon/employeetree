@@ -3,18 +3,27 @@
 <h2 align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=1000&center=true&vCenter=true&width=435&lines=%D0%AD%D1%82%D0%BE+%D0%BC%D0%BE%D1%91+%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5" alt="Typing SVG" /></a>
 </h2>
-    
-Есть 2 варианта разворота проекта:
+
+<h1>
+    Разворот проекта
+</h1>
+
 1. Docker
-    Команда для разворота проекта:
-      docker-compose up --build -d
-    Главная страница доступна по адресу: http://localhost/
-    Административная панель: http://localhost/admin/
+    Команда для разворота проекта:<br>
+      docker-compose up --build -d<br>
+    Главная страница доступна по адресу: http://localhost/<br>
+    Административная панель: http://localhost/admin/<br>
 2. Классический через manage.py со своей базой
+
+<h1>
+    Описание
+</h1>
 
 Структура проекта классическая Джанговская. За исключением того, что я добавил модуль services.py и обернул всё в Docker для удобного разворота
 
 Опишу здесь основные пункты по проекту
 
 Database: PostgreSQL
-Front: 
+Front: Bootstrap
+Main Framework: Django 4.1.2
+Asynchronous requests from frontend: AJAX
