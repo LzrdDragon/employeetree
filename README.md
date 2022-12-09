@@ -33,7 +33,7 @@ docker-compose up --build
     Описание
 </h1>
 
-<font color=#FFA500>Main Programming Language</font><span>:</span><span> Python 3.10.4</span><br>
+<font color=#FFA500>Main Programming Language</font><span style="color: #FFA500;">:</span><span> Python 3.10.4</span><br>
 Also I used a little bit of: JavaScript<br>
 With AJAX framowork for Asynchronous requests<br>
 Database: PostgreSQL<br>
