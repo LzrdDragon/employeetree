@@ -16,6 +16,11 @@
 ```bash
 docker-compose up --build -d
 ```
+или без влага -d
+```bash
+docker-compose up --build
+```
+чтобы видеть логи
 
 <span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">admin/</a></span>
