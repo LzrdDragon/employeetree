@@ -11,9 +11,11 @@
 
 1. Docker<br>
     Команда для разворота проекта:<br>
+    ```bash
       docker-compose up --build -d<br>
-    Главная страница будет доступна по адресу: http://localhost/<br>
-    Административная панель: http://localhost/admin/<br>
+    ```
+    Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a><br>
+    Административная панель: <a href="http://localhost/admin/" target="_blank">admin/</a><br>
 2. Классический через manage.py со своей базой
 
 <h1>
