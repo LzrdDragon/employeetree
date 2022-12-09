@@ -11,13 +11,13 @@
 
 <div>
 <h3>1. Docker</h3>
-<span>Команда для разворота проекта:</span><br>
+<span>Команда для разворота проекта:</span><br><br>
 
 ```bash
 docker-compose up --build -d
 ```
 
-<span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span>br>
+<span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">admin/</a></span>
 
 <h3>2. Классический через manage.py со своей базой</h3>
