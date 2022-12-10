@@ -26,7 +26,19 @@ docker-compose up --build
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
 
 <h3>2. Классический через manage.py со своей базой</h3>
+<span>Прежде всего необходимо задать настройки базы в файле ".env", который находится в одной дериктории с модулем "settings.py</span><br><br>
 
+```bash
+docker-compose up --build -d
+```
+или просто
+```bash
+docker-compose up --build
+```
+чтобы видеть логи
+
+<span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
+<span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
 </div>
 
 <h1>
