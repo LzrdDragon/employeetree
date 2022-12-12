@@ -49,12 +49,13 @@ python manage.py collectstatic
     Описание
 </h1>
 
-Main Programming Language<a href="#">:</a> Python 3.10.4<br>
-Also I used a little bit of<a href="#">:</a>  JavaScript<br>
+Язык программирования на Backend'е<a href="#">:</a> Python 3.10.4<br>
+Framework<a href="#">:</a>  Django 4.1.2<br>
+Язык на Frontend'е<a href="#">:</a>  JavaScript<br>
 With<a href="#">:</a>  AJAX framowork for Asynchronous requests<br>
 Database<a href="#">:</a>  PostgreSQL<br>
 Front<a href="#">:</a>  Bootstrap<br>
-Main Framework<a href="#">:</a>  Django 4.1.2<br>
+
 
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом
 
