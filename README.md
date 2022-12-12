@@ -8,7 +8,7 @@
 <h3 align="center">
     Древовидная структура отделов компании с выводом сотрудников
 </h3>
-<span font-size="10">Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit</span>
+<span font-size="8" align="right">Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit</span>
 
 <h1>
     Разворот проекта
