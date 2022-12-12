@@ -5,9 +5,10 @@
 </p>
 </h1>
 
-<h1 align="center">
-    Древовидная структура отделов компании с выводом сотрудников<br>Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit
-</h1>
+<h4 align="center">
+    Древовидная структура отделов компании с выводом сотрудников
+</h4>
+<span>Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit</span>
 
 <h1>
     Разворот проекта
