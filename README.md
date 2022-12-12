@@ -38,7 +38,7 @@ python manage.py migrate
 ```
 3. Соберём статические файлы
 ```bash
-python manage.py collectstatic
+python manage.py collectstatic --noinput
 ```
 
 <span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
