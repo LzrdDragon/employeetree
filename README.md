@@ -81,11 +81,11 @@ python manage.py runserver
 ### Основные директории проекта
 
     .
-│   
-│   │       ├───Django-4.1.2.dist-info
-│   │       ├───django_admin_interface-0.22.1.dist-info
-│   │       ├───django_colorfield-0.7.2.dist-info
-│   │       ├───django_environ-0.9.0.dist-info
-│   │       ├───django_flat_responsive-2.0.dist-info
-│   │       ├───django_flat_theme-1.1.4.dist-info
+    │   
+    ├───Django-4.1.2.dist-info
+    ├───django_admin_interface-0.22.1.dist-info
+    ├───django_colorfield-0.7.2.dist-info
+    ├───django_environ-0.9.0.dist-info
+    ├───django_flat_responsive-2.0.dist-info
+    ├───django_flat_theme-1.1.4.dist-info
 
