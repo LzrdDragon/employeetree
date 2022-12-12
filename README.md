@@ -46,11 +46,10 @@ python manage.py migrate
 ```bash
 python manage.py collectstatic --noinput
 ```
-4. Создадим супер юзера (воспользуемся кастомной командой)
+4. Создадим супер юзера (воспользуемся кастомной командой) (--force нужен, чтобы создать супер юзера даже если 1 или несколько уже созданы)
 ```bash
 python manage.py initadmin --user=admin --password=password --force=True
 ```
-Флаг "--force=True" говорит нам создать супер юзера, даже если он уже существует<br>
 5. Запускаем проект
 ```bash
 python manage.py runserver
