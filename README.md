@@ -45,7 +45,7 @@ python manage.py migrate
 ```bash
 python manage.py collectstatic --noinput
 ```
-3. Запускаем проект
+4. Запускаем проект
 ```bash
 python manage.py runserver
 ```
