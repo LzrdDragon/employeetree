@@ -26,7 +26,7 @@ docker-compose up --build
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
 
 <h3>2. Классический через manage.py со своей базой</h3>
-<span>Прежде всего необходимо задать настройки базы в файле ".env", который находится в одной дериктории с модулем "settings.py</span><br><br>
+<span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё</span><br><br>
 
 ```bash
 docker-compose up --build -d
