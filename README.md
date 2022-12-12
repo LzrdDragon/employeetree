@@ -50,7 +50,7 @@ python manage.py collectstatic --noinput
 ```bash
 python manage.py initadmin --user=admin --password=password --force=True
 ```
-<p align="right">Флаг "--force=True" говорит создать нам супер юзера, даже если он уже существует</p><br>
+Флаг "--force=True" говорит нам создать супер юзера, даже если он уже существует
 5. Запускаем проект
 ```bash
 python manage.py runserver
