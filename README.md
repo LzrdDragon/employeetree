@@ -6,9 +6,9 @@
 </h1>
 
 <h3 align="center">
-    Древовидная структура отделов компании с выводом сотрудников
+    Древовидная структура подразделений компании с выводом сотрудников
 </h3>
-<span font-size="8" align="right">Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit</span>
+<p font-size="8" align="right">Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit</p>
 
 <h1>
     Разворот проекта
@@ -45,9 +45,13 @@ python manage.py migrate
 ```bash
 python manage.py collectstatic --noinput
 ```
+3. Запускаем проект
+```bash
+python manage.py runserver
+```
 
-<span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
-<span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
+<span>Главная страница будет доступна по адресу: <a href=" http://127.0.0.1:8000/" target="_blank">127.0.0.1:8000/</a></span><br>
+<span>Административная панель: <a href=" http://127.0.0.1:8000/admin/" target="_blank">127.0.0.1:8000/admin/</a></span>
 </div>
 
 <h1>
@@ -59,12 +63,14 @@ Framework<a href="#">:</a>  Django 4.1.2<br>
 <br>
 Язык на Frontend'е<a href="#">:</a>  JavaScript<br>
 С использоваинем<a href="#">:</a>  jquery в качестве AJAX framework'а для асинхронных запросов к бэку<br>
-и Bootstrap framework составления визкальной части дерева<br>
+Стили: Bootstrap framework<br>
 <br>
 База данных<a href="#">:</a> PostgreSQL 14<br>
 
 
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом.
+
+
 
 ### A typical top-level directory layout
 
