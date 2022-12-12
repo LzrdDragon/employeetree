@@ -28,14 +28,18 @@ docker-compose up --build
 <h3>2. Классический через manage.py со своей базой</h3>
 <span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё</span><br><br>
 
+1. Создадим миграции (на всякий случай, они уже должны быть)
 ```bash
-docker-compose up --build -d
+python manage.py makemigrations
 ```
-или просто
+2. Выполним миграции
 ```bash
-docker-compose up --build
+python manage.py migrate
 ```
-чтобы видеть логи
+3. Соберём статические файлы
+```bash
+python manage.py collectstatic
+```
 
 <span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
