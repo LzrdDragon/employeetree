@@ -46,7 +46,7 @@ python manage.py migrate
 ```bash
 python manage.py collectstatic --noinput
 ```
-4. Создадим супер юзера (воспользуемся кастомной командой) (--force нужен, чтобы создать супер юзера даже если 1 или несколько уже созданы)
+4. Создадим супер юзера (воспользуемся кастомной командой)<br>(--force нужен, чтобы создать супер юзера даже если 1 или несколько уже созданы)
 ```bash
 python manage.py initadmin --user=admin --password=password --force=True
 ```
@@ -54,7 +54,6 @@ python manage.py initadmin --user=admin --password=password --force=True
 ```bash
 python manage.py runserver
 ```
-
 
 </div>
 
@@ -71,8 +70,6 @@ python manage.py runserver
 <br>
 <b>База данных</b><a href="#">:</a> PostgreSQL 14<br>
 
-
-
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом.
 
 <h3>Из интересного</h3>
@@ -83,15 +80,3 @@ python manage.py runserver
 В админке добавлено множество разных фильтров, полей поиска и можно выбрать тему<br>
 <br>
 Ограничения старался имплементировать на уровне модели, чтобы точно нельзя было записать в базу ошибочные данные
-
-### Основные директории проекта
-
-    .
-    │   
-    ├───Django-4.1.2.dist-info
-    ├───django_admin_interface-0.22.1.dist-info
-    ├───django_colorfield-0.7.2.dist-info
-    ├───django_environ-0.9.0.dist-info
-    ├───django_flat_responsive-2.0.dist-info
-    ├───django_flat_theme-1.1.4.dist-info
-
