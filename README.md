@@ -50,8 +50,8 @@ python manage.py collectstatic --noinput
 python manage.py runserver
 ```
 
-<span>Главная страница будет доступна по адресу: <a href=" http://127.0.0.1:8000/" target="_blank">127.0.0.1:8000/</a></span><br>
-<span>Административная панель: <a href=" http://127.0.0.1:8000/admin/" target="_blank">127.0.0.1:8000/admin/</a></span>
+<span>Главная страница будет доступна по адресу: <a href=" http://127.0.0.1:8000/" target="_blank">127.0.0.1:8000/ </a></span><br>
+<span>Административная панель: <a href=" http://127.0.0.1:8000/admin/" target="_blank">127.0.0.1:8000/admin/ </a></span>
 </div>
 
 <h1>
