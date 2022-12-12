@@ -5,6 +5,10 @@
 </p>
 </h1>
 
+<h1 align="center">
+    Древовидная структура отделов компании с выводом сотрудников<br>Ссылка на задание: https://docs.google.com/document/d/1mbZvp7GbTknanOjKF9IrPB7Zu4-tBnOHf09__HBLkqs/edit
+</h1>
+
 <h1>
     Разворот проекта
 </h1>
@@ -26,7 +30,7 @@ docker-compose up --build
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
 
 <h3>2. Классический через manage.py со своей базой</h3>
-<span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё, точнее для Docker'а с ней.</span><br><br>
+<span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё, точнее для Docker контейнера с ней.</span><br><br>
 
 1. Создадим миграции (на всякий случай, они уже должны быть)
 ```bash
@@ -49,15 +53,17 @@ python manage.py collectstatic --noinput
     Описание
 </h1>
 
-Язык программирования на Backend'е<a href="#">:</a> Python 3.10.4<br>
+Основной язык программирования<a href="#">:</a> Python 3.10.4<br>
 Framework<a href="#">:</a>  Django 4.1.2<br>
+<br>
 Язык на Frontend'е<a href="#">:</a>  JavaScript<br>
-With<a href="#">:</a>  AJAX framowork for Asynchronous requests<br>
-Database<a href="#">:</a>  PostgreSQL<br>
-Front<a href="#">:</a>  Bootstrap<br>
+С использоваинем<a href="#">:</a>  jquery в качестве AJAX framework'а для асинхронных запросов к бэку<br>
+и Bootstrap framework составления визкальной части дерева<br>
+<br>
+База данных<a href="#">:</a> PostgreSQL 14<br>
 
 
-Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом
+Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом.
 
 ### A typical top-level directory layout
 
@@ -69,5 +75,3 @@ Front<a href="#">:</a>  Bootstrap<br>
     ├── tools                   # Tools and utilities
     ├── LICENSE
     └── README.md
-
-<br>По самому коду, там есть некоторые более удачные решения, есть менее удачные, но в целом своим кодом я доволен, прошу оценить.
