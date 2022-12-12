@@ -63,9 +63,10 @@ Framework<a href="#">:</a>  Django 4.1.2<br>
 <br>
 Язык на Frontend'е<a href="#">:</a>  JavaScript<br>
 С использоваинем<a href="#">:</a>  jquery в качестве AJAX framework'а для асинхронных запросов к бэку<br>
-Стили: Bootstrap framework<br>
+Web Framework: Bootstrap<br>
 <br>
 База данных<a href="#">:</a> PostgreSQL 14<br>
+
 
 
 Структура проекта классическая, за исключением того, что я добавил модуль services.py для логики, которую хочется вынести из views.py, но не хочется добавлять в models.py, чтобы не "раздувать" модели и не было проблем с кольцевым импортом.
