@@ -8,4 +8,7 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /code
+
+RUN chmod +x ./code/entrypoint.sh
+
 WORKDIR /code/treeEmployeeStrucure
