@@ -48,10 +48,9 @@ docker rm -fv $(docker ps -aq)
 ```
 3. Смотрим какие сервисы используют 80 порт
 ```bash
-sudo lsof -i -P -n | grep <port number>
+sudo lsof -i -P -n | grep 80
 ```
 4. Удаляем мешающий сервис
-Для Mac
 ```bash
 sudo kill <process id>
 ```
