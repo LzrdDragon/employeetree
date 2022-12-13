@@ -18,7 +18,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         user = get_user_model()
 
-        print(options['force'])
+        # if --force is not on and some superuser does already exist, do not create a new one
         if not options["force"] and user.objects.exists():
             return
 

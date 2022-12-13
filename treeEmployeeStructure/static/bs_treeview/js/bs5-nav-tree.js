@@ -101,65 +101,54 @@ class NavTree {
           this.props.groupCloseIcon
         );
         collapsable.addEventListener("show.bs.collapse", (e) => {
-            console.log(li.firstChild)
-//          let showed_ = false;
-//          if (showed_ !== false) {
-//              icon.classList.replace(
-//                this.props.groupCloseIcon,
-//                this.props.groupOpenIcon
-//              );
-//              icon.classList.replace(
-//                this.props.groupCloseIconClass,
-//                this.props.groupOpenIconClass
-//              );
-//              e.stopPropagation();
-//            }
-//          else {
-              icon.classList.replace(
-                this.props.groupCloseIcon,
-                this.props.groupOpenIcon
-              );
-              icon.classList.replace(
-                this.props.groupCloseIconClass,
-                this.props.groupOpenIconClass
-              );
-              e.stopPropagation();
-              $.getJSON('/divisions/' + li.dataset.division_id, function(employees_list, jqXHR){
+            icon.classList.replace(
+              this.props.groupCloseIcon,
+              this.props.groupOpenIcon
+            );
+            icon.classList.replace(
+              this.props.groupCloseIconClass,
+              this.props.groupOpenIconClass
+            );
+            e.stopPropagation();
 
-                  let a = '';
+              if (li.dataset.employees) {
+                  if (li.firstChild.nextSibling.checked === true) {
+                  } else {
+//                      let url = document.location.protocol + "//" + document.location.hostname + ":8000";
+                      $.getJSON('/divisions/' + li.dataset.division_id, function(employees_dict, jqXHR){
+                          let a = '';
+                          for (const [id_, data] of Object.entries(employees_dict)) {
+                              a += `<li id=li${id_}-employee class="nav-item d-flex flex-column nt-li"` +
+                                   `    data-value=li${id_}-employee>` +
+                                   `    <div class='d-flex'>` +
+                                   `        <span class="prefix d-flex flex-row align-items-center">` +
+                                   `            <span class="mx-1">` +
+                                   `                <a class="nav-link flex-grow-1 px-0">` +
+                                   `                    <i class="fas fa-link">` +
+                                   `                    </i>` +
+                                   `                </a>` +
+                                   `            </span>` +
+                                   `        </span>` +
+                                   `        <a class="nav-link flex-grow-1">` +
+                                   `           ФИО: ${data['surname']} ${data['name']} ${data['middle_name']}<br>\
+                                               Дата трудоустройства: ${data['employed_date']}<br>\
+                                               Должность: ${data['position']}<br>\
+                                               Зарплата: ${Math.abs(data['salary']).toLocaleString('ru-RU')} ₽` +
+                                   `        </a>` +
+                                   `        <span class="suffix d-flex flex-row align-items-center"></span>` +
+                                   `    </div>` +
+                                   `</li> <br>`;
+                          };
 
-                  for (const [id_, data] of Object.entries(employees_list)) {
+                          let b = document.createElement('div')
+                          b.innerHTML = a
+                          ul.appendChild(b)
+                          li.firstChild.nextSibling.setAttribute("checked", "checked")
 
-                      a += `<li id=li${id_}-employee class="nav-item d-flex flex-column nt-li"` +
-                           `    data-value=li${id_}-employee>` +
-                           `    <div class='d-flex'>` +
-                           `        <span class="prefix d-flex flex-row align-items-center">` +
-                           `            <span class="mx-1">` +
-                           `                <a class="nav-link flex-grow-1 px-0">` +
-                           `                    <i class="fas fa-link">` +
-                           `                    </i>` +
-                           `                </a>` +
-                           `            </span>` +
-                           `        </span>` +
-                           `        <a class="nav-link flex-grow-1">` +
-                           `           ${data['surname']} ${data['name']} ${data['middle_name']} \
-                                       ${data['employed_date']} ${data['position']} \
-                                       ${data['position']}` +
-                           `        </a>` +
-                           `        <span class="suffix d-flex flex-row align-items-center"></span>` +
-                           `    </div>` +
-                           `</li>
-                           `;
-                  };
-//                  console.log(a);
-//                  console.log(ul.innerHTML += a);
-//                  console.log('done')
-//                  console.log(ul);
-//                  li.parentNode.innerHTML += a;
-              });
-//              ul.innerHTML += a
-//              showed_ = true
-//            };
+                      });
+                    };
+
+              };
         });
         collapsable.addEventListener("hide.bs.collapse", (e) => {
           icon.classList.replace(

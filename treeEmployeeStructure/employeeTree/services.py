@@ -95,7 +95,7 @@ class DivisionAggregation:
     @staticmethod
     def make_subdivisions_dicts(subdivisions: Iterable[Division]) -> Generator:
         """Creates for each given division a dictionary which has the division as a key
-        and a {'employees': [], 'subdivisions': {}} dictionary is a value and yields both of it,
+        and a {'employees': [], 'subdivisions': {}} dictionary as a value and yields both of it,
         as division, as a dictionary.
             It's designed to be used in loops
         """

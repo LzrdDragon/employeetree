@@ -1,9 +1,5 @@
 #!/bin/sh
 
-echo 'wait 10 seconds'
-sleep 10
-echo 'ok, go'
-
 python /code/treeEmployeeStructure/manage.py migrate
 python /code/treeEmployeeStructure/manage.py createcachetable
 python /code/treeEmployeeStructure/manage.py collectstatic  --noinput
