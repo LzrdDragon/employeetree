@@ -41,8 +41,8 @@ docker-compose up --build
 <span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё, точнее для Docker контейнера с ней.</span><br><br>
 
 Переместитесь в дерикторию с manage.py
-1. Установим зависимости<br><br>
-    <p position="absolute" align="left">Если у вас Unix система:</p>
+1. Установим зависимости<br>
+<p position="absolute" align="left">Если у вас Unix система:</p>
 ```bash
 pip install ../requirements/requirements-unix.txt
 ```
