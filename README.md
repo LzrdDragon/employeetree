@@ -16,8 +16,11 @@
 
 <div>
 <h3>1. Docker</h3>
+<span>Если у вас Mac на архитектуре ARM, то перед разворотом на Docker'е необходимо прописать следующую команду (там есть баг с libpq):</span><br><br>
+```bash
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+```
 <span>Команда для разворота проекта:</span><br><br>
-
 ```bash
 docker-compose up --build -d
 ```
@@ -28,13 +31,14 @@ docker-compose up --build
 чтобы видеть логи
 
 <span>Главная страница будет доступна по адресу: <a href="http://localhost/" target="_blank">localhost</a></span><br>
-<span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span>
+<span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span><br>
+<span>Админ логин: admin<br>Админ пароль: admin</span>
 
 <h3>2. Классический через manage.py со своей базой</h3>
 <span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё, точнее для Docker контейнера с ней.</span><br><br>
 
 Переместитесь в дерикторию с manage.py
-1. Установим зависимости
+1. Установим зависимости<br>
 Если у вас Unix система:
 ```bash
 pip install ../requirements/requirements-unix.txt
