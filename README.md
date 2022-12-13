@@ -46,7 +46,7 @@ docker-compose up --build
 ```bash
 pip install ../requirements/requirements-unix.txt
 ```
-(space, space)Если у вас Windows:
+Если у вас Windows:
 ```bash
 pip install ../requirements/requirements-win.txt
 ```
