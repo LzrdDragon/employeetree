@@ -42,7 +42,7 @@ docker-compose up --build
 
 Переместитесь в дерикторию с manage.py
 1. Установим зависимости<br>
-<p position="absolute" align="left">Если у вас Unix система:</p>
+Если у вас Unix система:
 ```bash
 pip install ../requirements/requirements-unix.txt
 ```
