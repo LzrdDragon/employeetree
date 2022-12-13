@@ -16,7 +16,7 @@
 
 <div>
 <h3>1. Docker</h3>
-<span>Если у вас Mac на архитектуре ARM, то перед разворотом на Docker'е необходимо прописать следующую команду (там есть баг с libpq):</span><br><br>
+<span>Если у вас Mac на архитектуре ARM, то перед разворотом на Docker'е необходимо прописать следующую команду (там есть баг с libpq):</span>
 ```bash
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 ```
