@@ -34,23 +34,32 @@ docker-compose up --build
 <span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё, точнее для Docker контейнера с ней.</span><br><br>
 
 Переместитесь в дерикторию с manage.py
-1. Создадим миграции (на всякий случай, они уже должны быть)
+1. Установим зависимости
+Если у вас Unix система:
+```bash
+pip install ../requirements/requirements-unix.txt
+```
+Если у вас Windows
+```bash
+pip install ../requirements/requirements-win.txt
+```
+2. Создадим миграции (на всякий случай, они уже должны быть)
 ```bash
 python manage.py makemigrations
 ```
-2. Выполним миграции
+3. Выполним миграции
 ```bash
 python manage.py migrate
 ```
-3. Соберём статические файлы
+4. Соберём статические файлы
 ```bash
 python manage.py collectstatic --noinput
 ```
-4. Создадим супер юзера (воспользуемся кастомной командой)<br>(--force нужен, чтобы создать супер юзера даже если 1 или несколько уже созданы)
+5. Создадим супер юзера (воспользуемся кастомной командой)<br>(--force нужен, чтобы создать супер юзера даже если 1 или несколько уже созданы)
 ```bash
 python manage.py initadmin --user=admin --password=password --force=True
 ```
-5. Запускаем проект
+6. Запускаем проект
 ```bash
 python manage.py runserver
 ```
