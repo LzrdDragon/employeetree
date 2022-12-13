@@ -23,7 +23,7 @@
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 ```
     
-<span>Команда для разворота проекта:</span><br><br>
+<span>Команда для разворота проекта:</span><br>
 ```bash
 docker-compose up --build -d
 ```
