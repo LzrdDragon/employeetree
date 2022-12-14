@@ -104,7 +104,7 @@ python manage.py runserver
 <br>
 <b>Язык на Frontend'е</b><a href="#">:</a>  JavaScript<br>
 <b>С использоваинем</b><a href="#">:</a>  jquery в качестве AJAX framework'а для асинхронных запросов к бэку<br>
-<b>Web Framework</b>: Bootstrap<br>
+<b>Web Framework</b><a href="#">:</a> Bootstrap<br>
 <br>
 <b>База данных</b><a href="#">:</a> PostgreSQL 14<br>
 
