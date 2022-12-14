@@ -37,7 +37,7 @@ docker-compose up --build
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span><br>
 <span>Админ логин: <a href="#">admin</a><br>Админ пароль: <a href="#">admin</a></span>
 
-Если возникли проблемы с nginx и 80 портом, необходимо сделать следующее:
+Если возникли проблемы с nginx и 80 портом, например, на Ubuntu, необходимо сделать следующее:
 1. Останавливаем все контейнеры
 ```bash
 docker-compose down
