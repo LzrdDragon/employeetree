@@ -70,7 +70,6 @@ pip install ../requirements/requirements-unix.txt
 ```
 <ul start="~" dir="auto">
     <li>
-        или
         <br>
         1.2 Если у вас Windows система:
         <br>
