@@ -1,3 +1,4 @@
+from __future__ import annotations
 from abc import ABC
 from typing import Iterable, Generator
 
@@ -14,20 +15,23 @@ def custom_titled_filter(title: str | None = None):
     """
 
     if title is not None:
+
         class Wrapper(admin.FieldListFilter, ABC):
             def __new__(cls, *args, **kwargs):
                 instance = admin.FieldListFilter.create(*args, **kwargs)
                 instance.title = title
                 return instance
+
         return Wrapper
     else:
         print("Tittle argument is necessary")
 
 
 class DivisionAggregation:
-
     @staticmethod
-    def find_a_parent(division: Division | None = None, where_to_search: dict | None = None) -> dict | None:
+    def find_a_parent(
+        division: Division | None = None, where_to_search: dict | None = None
+    ) -> dict | None:
         """
         Recursively finds a dict which contains a division as a key, if exists and returns it, else
         returns None
@@ -35,20 +39,25 @@ class DivisionAggregation:
 
         # check for attributes
         if division and where_to_search is not None:
-
             # validate attributes
             if not isinstance(where_to_search, dict):
-                raise AttributeError('"find_a_parent()" expects dict as a second argument.')
+                raise AttributeError(
+                    '"find_a_parent()" expects dict as a second argument.'
+                )
             if not isinstance(division, Division):
-                raise AttributeError('"find_a_parent()" expects an instance of a Division model '
-                                     'class as a first argument.')
+                raise AttributeError(
+                    '"find_a_parent()" expects an instance of a Division model '
+                    "class as a first argument."
+                )
 
             # find a parent dict
             if division in where_to_search.keys():
                 return where_to_search
             for value in where_to_search.values():
-                if value['subdivisions']:
-                    parent_dict = DivisionAggregation.find_a_parent(division, value['subdivisions'])
+                if value["subdivisions"]:
+                    parent_dict = DivisionAggregation.find_a_parent(
+                        division, value["subdivisions"]
+                    )
                     if parent_dict:
                         return parent_dict
             return None
@@ -78,18 +87,13 @@ class DivisionAggregation:
         """
         divisions_tree = {}
         main_divisions = Division.objects.filter(parent=None)
+        employees = main_divisions.prefetch_related("employee_set")
         for division in main_divisions:
-            division_employees = Employee.objects.filter(division=division)
+            division_employees = employees.filter(division=division)
             if division_employees:
-                divisions_tree[division] = {
-                    "employees": True,
-                    "subdivisions": {}
-                }
+                divisions_tree[division] = {"employees": True, "subdivisions": {}}
             else:
-                divisions_tree[division] = {
-                    "employees": False,
-                    "subdivisions": {}
-                }
+                divisions_tree[division] = {"employees": False, "subdivisions": {}}
         return divisions_tree
 
     @staticmethod
@@ -103,19 +107,9 @@ class DivisionAggregation:
             division_employees = Employee.objects.filter(division=division)
 
             if division_employees:
-                subdivision_tree = {
-                    division: {
-                        "employees": True,
-                        "subdivisions": {}
-                    }
-                }
+                subdivision_tree = {division: {"employees": True, "subdivisions": {}}}
             else:
-                subdivision_tree = {
-                    division: {
-                        "employees": False,
-                        "subdivisions": {}
-                    }
-                }
+                subdivision_tree = {division: {"employees": False, "subdivisions": {}}}
 
             yield division, subdivision_tree
 
@@ -131,6 +125,6 @@ def get_employees_dict(employees_container: Iterable[Employee]) -> dict:
             "middle_name": str(employee.middle_name),
             "employed_date": str(employee.employed_date),
             "position": str(employee.position.name),
-            "salary": str(employee.salary)
+            "salary": str(employee.salary),
         }
     return employees_dict
