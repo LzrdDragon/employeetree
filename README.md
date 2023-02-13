@@ -68,14 +68,14 @@ docker-compose up --build
 ```bash
 pip install ../requirements/requirements-unix.txt
 ```
-<ol start="~" dir="auto">
+<ul start="~" dir="auto">
     <li>
         или
         <br>
         1.2 Если у вас Windows система:
         <br>
     </li>
-</ol>
+</ul>
 
 ```bash
 pip install ../requirements/requirements-win.txt
