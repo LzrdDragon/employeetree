@@ -70,9 +70,11 @@ pip install ../requirements/requirements-unix.txt
 ```
 <ol dir="auto">
     <li>
-        "1.2 Если у вас Windows:"
+        1.2 Если у вас Windows:
+        <br>
     </li>
 </ol>
+
 ```bash
 pip install ../requirements/requirements-win.txt
 ```
