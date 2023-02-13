@@ -37,6 +37,28 @@ docker-compose up --build
 <span>Административная панель: <a href="http://localhost/admin/" target="_blank">localhost/admin/</a></span><br>
 <span>Админ логин: <a href="#">admin</a><br>Админ пароль: <a href="#">admin</a></span>
 
+Если возникли проблемы с nginx и 80 портом, например, на Ubuntu, необходимо сделать следующее:
+1. Останавливаем все контейнеры
+```bash
+docker-compose down
+```
+2. Удаляем все контейнеры
+```bash
+docker rm -fv $(docker ps -aq)
+```
+3. Смотрим какие сервисы используют 80 порт
+```bash
+sudo lsof -i -P -n | grep 80
+```
+4. Удаляем мешающий сервис
+```bash
+sudo kill <process id>
+```
+5. Заново заапускам наши контейнеры
+```bash
+docker-compose up --build
+```
+
 <h3>2. Классический через manage.py со своей базой</h3>
 <span>Прежде всего необходимо создать базу и задать её параметры в файле ".env", который находится в одной дериктории с модулем "settings.py". Я использовал PostgreSQL, поэтому дефолтные настройки заданы для неё, точнее для Docker контейнера с ней.</span><br><br>
 
@@ -82,7 +104,7 @@ python manage.py runserver
 <br>
 <b>Язык на Frontend'е</b><a href="#">:</a>  JavaScript<br>
 <b>С использоваинем</b><a href="#">:</a>  jquery в качестве AJAX framework'а для асинхронных запросов к бэку<br>
-<b>Web Framework</b>: Bootstrap<br>
+<b>Web Framework</b><a href="#">:</a> Bootstrap<br>
 <br>
 <b>База данных</b><a href="#">:</a> PostgreSQL 14<br>
 
