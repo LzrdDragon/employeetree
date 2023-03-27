@@ -8,7 +8,7 @@
 <h3 align="center">
     Древовидная структура подразделений компании с выводом сотрудников
 </h3>
-<p font-size="6" align="center">Ссылка на задание: https://docs.google.com/document/d/1oYMPrc78lPBoDuHyHQAFDXPHR8yl3u5oTR_SaXpX-bU/edit</p>
+<p font-size="6" align="center"><a href="https://docs.google.com/document/d/1oYMPrc78lPBoDuHyHQAFDXPHR8yl3u5oTR_SaXpX-bU/edit">Ссылка на задание>/a></p>
 
 <h1>
     Разворот проекта
