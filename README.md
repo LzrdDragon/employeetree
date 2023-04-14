@@ -54,7 +54,7 @@ sudo lsof -i -P -n | grep 80
 ```bash
 sudo kill <process id>
 ```
-5. Заново заапускам наши контейнеры
+5. Заново запускам наши контейнеры
 ```bash
 docker-compose up --build
 ```
